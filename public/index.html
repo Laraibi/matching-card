@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script src="https://kit.fontawesome.com/359c3c1565.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+
+
+  <!-- Calendly badge widget begin -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script
+    type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/younessbenjelloun/30min', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
+  <!-- Calendly badge widget end -->
+
+  <script type="text/javascript">window.onload = function () {
+      Calendly.initBadgeWidget({ url: 'https://calendly.com/younessbenjelloun/30min?hide_event_type_details=1&hide_gdpr_banner=1', text: 'Réservez un Rendez Vous', color: '#ededed', textColor: '#ffffff', branding: true });
+      jQuery('.calendly-badge-content').css("background-color", "#8BCDDA");
+      let theButton = jQuery('.calendly-badge-content');
+      theButton.move('.myArea');
+    }</script>
+</body>
+
 </html>
